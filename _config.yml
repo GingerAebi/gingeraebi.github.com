@@ -1,85 +1,40 @@
-# # # # # # # # # # # # #
-#   K i k o - p l u s   #
-# # # # # # # # # # # # #
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-# Basic
-name:               "GingerAebi Blog"
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+disqus: dbyll
+google_analytics: dbyll
+title: dbyll
 
-
-
-author:
-  name:             GingerAebi
-  facebook:         fb.com/ljb0484
-  twitter:          your-id
-  github:           github.com/GingerAebi
-  linkedin:         your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            gingeraebi@gmail.com
-
-# Google-analytics
-google-analytics:
-  id:               ""
-
-# Disqus
-disqus:
-  id:               "your-id"
-
-# URL
-url:                "https://gingeraebi.github.io"
-#url:               "localhost:4000"
-baseurl:            ""
-
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:           Asia/Seoul
-permalink:          /:year-:month-:day/:title/
-
-# Pagination
-paginate:           5
-paginate_path:      /page:num/
-
-# Markdown
-markdown:           kramdown
-kramdown:
-  imput:            GFM
-
-# Navigation
-nav:
-  - name:           "About"
-    url:            "/about"
-  - name:           "Archive"
-    url:            "/archive"
-  - name:           "Tags"
-    url:            "/tags"
-  - name:           "Github"
-    url:            "https://github.com/AWEEKJ/Kiko-plus"
-
-
-
-# Sass
-sass:
-  sass_dir:         _sass
-  style:            :compressed
-
-# Scopes
 defaults:
   -
     scope:
-      path:         ""
-      type:         "pages"
+      path: "" # empty string for all files
     values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
+      title: 진저애비 블로그
 
-# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+description: Stylish Jekyll Theme
+author:
+  name: GingerAebi
+  email: gingeraebi@gmail.com
+  github: gingeraebi
+  twitter: null
+  pinterest: null
+  linkedin: null
+  bio: DBYLL테마를 이용해 만든 블로그입니다. 
+  email_md5: 726351295ec82e145928582f595aa3aa
+
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://lh3.googleusercontent.com/GzdpEZxZ_fWmSs24Mc_t3F3kZFZCNNOVzSKfW4cZW9TDHDKv_3x_Zh-qM_wPIZSrK_tXma3c--NlZ9w-flbUGihddg=s256
+BASE_PATH:
+
 gems:
-  - jekyll-seo-tag
   - jekyll-paginate
-
-exclude:            [vendor]
