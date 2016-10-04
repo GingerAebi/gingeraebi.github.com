@@ -3,19 +3,19 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "Kiko Plus"
+name:               "GingerAebi Blog"
 
 
 
 author:
-  name:             your-name
-  facebook:         your-id
+  name:             GingerAebi
+  facebook:         fb.com/ljb0484
   twitter:          your-id
-  github:           your-id
+  github:           github.com/GingerAebi
   linkedin:         your-id
   medium:           your-id
   tumblr:           your-id
-  email:            your-id@your-email.com
+  email:            gingeraebi@gmail.com
 
 # Google-analytics
 google-analytics:
@@ -26,7 +26,7 @@ disqus:
   id:               "your-id"
 
 # URL
-url:                "https://AWEEKJ.github.io"
+url:                "https://gingeraebi.github.io"
 #url:               "localhost:4000"
 baseurl:            ""
 
