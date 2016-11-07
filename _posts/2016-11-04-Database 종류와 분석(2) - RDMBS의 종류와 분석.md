@@ -15,7 +15,7 @@ description: 서버개발자로 첫 발을 때면서 DB에 대한 개념 재정�
 이 전 포스트에서 말했듯이 RDBMS란 데이터를 '관계'를 가질 수 있게 설계한 데이터베이스입니다.  
 이번 포스트 에서는 이 RDBMS의 종류에는 어떤게 있는지, 어떤 특징이 있는지에 대해 알아보겠습니다.
 
-### MySQL
+### 1. MySQL
 ![](https://upload.wikimedia.org/wikipedia/en/6/62/MySQL.svg)
 
 가장 대표적으로 많이 사용되고 필자도 가장 많이 애용한 데이터베이스입니다. 간단한 유저가 많지 않은 프로그램의 데이터베이스로는 가장 무난히 쓸 수 있고 성능도 어느정도 잘 받쳐주는 서버라고 생각됩니다. 데이터를 넣고 빼는 것에 대한 안정성이 보장되고, 복잡한 조인이나 쿼리도 무난하게 잘 돌아갑니다. (하지만 테이블이 커진고 데이터가 많아진다면...)
@@ -39,7 +39,7 @@ MySQL에서는 모든 SQL 처리를 ~~단일 코어에서~~(MySQL 5.5.X부터는
 
 *참고 : [MySQL 5.5의 새로워진 것들](https://www.linux.co.kr/home2/board/subbs/board.php?bo_table=lecture&wr_id=1759)*
 
-##### Nested Loop Join방식이란?
+**Nested Loop Join방식이란?**
 
 MySQL에서 한 db에 A와 B테이블이 있다고 생각해봅시다. 이 때 A테이블과 B테이블에서 결과를 가져오려 합니다.  
 예를 들어 유저테이블 (A테이블)에서 유저의 이름을 가져오고 쿠폰테이블 (B테이블)에서 유저에게 할당된 쿠폰 이름을 가져오고 싶다고 해보겠습니다.  
@@ -55,17 +55,17 @@ MySQL에서 한 db에 A와 B테이블이 있다고 생각해봅시다. 이 때 A
 예를 들면 이런 식으로 말이죠. (자바 문법입니다.)
 
 	for (User user : users) {
-		for(Coupon coupon : coupons) {
-			if(user.userId === coupon.userId) {
-				System.out.println(user.userName + coupon.couponName);
-			}
-		}
+	    for(Coupon coupon : coupons) {
+	        if(user.userId === coupon.userId) {
+	            System.out.println(user.userName + coupon.couponName);
+	        }
+	    }
 	}
 
 
 위 글에는 Nested Join Loop에 대한 설명이 조금은 부족한거 같아서 다른 글 또한 찾아보았습니다. 
 
-##### Nest Loop Join 방식의 특징 
+**Nest Loop Join 방식의 특징** 
 
 1. 순차적이다. 
 2. 부분범위 처리가 가능하다.
@@ -86,3 +86,4 @@ inner table 검색시에는 인덱스를 사용하므로 inner 테이블의 인�
 - http://wjkim-info.tistory.com/793  
 - http://egloos.zum.com/jjekr/v/3129366
 
+#### 특징 2. 다양한 스토리지 엔진 
