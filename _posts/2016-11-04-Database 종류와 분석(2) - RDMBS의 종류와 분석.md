@@ -89,5 +89,5 @@ inner table 검색시에는 인덱스를 사용하므로 inner 테이블의 인�
 #### 특징 2. 다양한 스토리지 엔진 
 MySQL에서는 다양한 스토리지 엔진을 지원한다. 
 
-![](https://github.com/GingerAebi/gingeraebi.github.com/blob/master/_posts/image/capture_mysql_storage_engine.png)
+![image](http://github.com/GingerAebi/gingeraebi.github.com/blob/master/_posts/image/capture_mysql_storage_engine.png)
 
