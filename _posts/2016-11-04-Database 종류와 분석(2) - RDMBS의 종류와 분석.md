@@ -1,10 +1,7 @@
 ---
 layout: post
 title: Database 종류와 분석(2) - RDBMS의 종류와 분석
-categories: [개발, DB, 공부, 서버]
-tags: [개발, DB, 공부, 서버]
-comments: true
-description: 서버개발자로 첫 발을 때면서 DB에 대한 개념 재정리를 위해 작성
+
 ---
 
 - [Database 종류와 분석(1) - RDBMS란?](https://gingeraebi.github.io/%EA%B0%9C%EB%B0%9C/db/%EA%B3%B5%EB%B6%80/%EC%84%9C%EB%B2%84/2016/11/03/Database%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%EC%9E%A5%EB%8B%A8%EC%A0%90.html)
@@ -47,7 +44,7 @@ MySQL에서 한 db에 A와 B테이블이 있다고 생각해봅시다. 이 때 A
 
 	SELECT user.userName, coupon.couponName   
 	FROM User user, Coupon coupon  
-	WHERE user.userId = coupon.userId 
+	WHERE user.userId = coupon.userId
 
 간단히 설명해보자면 User 테이블의 userId와 Coupon 테이블의 userId가 같은곳에서 각각의 이름을 가져와 보여주는 쿼리입니다.
 
@@ -63,17 +60,17 @@ MySQL에서 한 db에 A와 B테이블이 있다고 생각해봅시다. 이 때 A
 	}
 
 
-위 글에는 Nested Join Loop에 대한 설명이 조금은 부족한거 같아서 다른 글 또한 찾아보았습니다. 
+위 글에는 Nested Join Loop에 대한 설명이 조금은 부족한거 같아서 다른 글 또한 찾아보았습니다.
 
-**Nest Loop Join 방식의 특징** 
+**Nest Loop Join 방식의 특징**
 
-1. 순차적이다. 
+1. 순차적이다.
 2. 부분범위 처리가 가능하다.
 3. 종속적이다. 드라이빙 테이블의 처리범위에 따라 처리량 및 속도가 결정된다.
 4. Random access 위주, single block , random i/o가 많이 일어난다.
-5. 연결고리 상태에 민감하다. 
+5. 연결고리 상태에 민감하다.
 inner table 검색시에는 인덱스를 사용하므로 inner 테이블의 인덱스 효율이 좋아야 한다.
-6. 좁은 범위처리에 유리하다. (쿼리 수행결과가 전체 row의 15% 이내일 경우 유리) 
+6. 좁은 범위처리에 유리하다. (쿼리 수행결과가 전체 row의 15% 이내일 경우 유리)
 7. 인덱스의 효율이 좋다면 가장 최적의 성능을 발휘하는 조인기법이다.
 8. 드라이빙테이블이 아닌 테이블의 조건이 없어도 일의 량에 별로 영향을 주지 않으므로 NL loop가 유리하다.
 예) 주문처리
@@ -82,11 +79,11 @@ inner table 검색시에는 인덱스를 사용하므로 inner 테이블의 인�
 더 깊게는 이 글에서는 다루지 않겠지만, 궁금하신분들은 찾아보는 것도 좋으리라 생각됩니다.
 
 참고한 블로그
- 
+
 - http://wjkim-info.tistory.com/793  
 - http://egloos.zum.com/jjekr/v/3129366
 
-#### 특징 2. 다양한 스토리지 엔진 
+#### 특징 2. 다양한 스토리지 엔진
 MySQL에서는 다양한 스토리지 엔진을 지원합니.  
 아래는 각각의 특징에 대해 정리 해둔 표입니다.  
 
@@ -113,6 +110,3 @@ MySQL에서는 다양한 스토리지 엔진을 지원합니.
 일반적인 웹 서비스에 사용하기 적합할 것으로 보입니다.
 
 다음 포스팅에서는 또 다른 RDBMS인 MSSQL의 특징에 대해서 알아보도록 하겠습니다.
-
-
-
