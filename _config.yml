@@ -1,40 +1,80 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+#
+# This file contains configuration flags to customize your site
+#
 
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
-highlighter: pygments
-markdown: kramdown
-disqus: GingerAebi
-google_analytics: dbyll
-title: GingerAebi
+# Name of your site (displayed in the header)
+name: GingerAebi
+# Short bio or description (displayed in the header)
+description: 진저애비의 블로그입니다.
 
-defaults:
-  -
-    scope:
-      path: "" # empty string for all files
-    values:
-      title: 진저애비 블로그
 
-description: Stylish Jekyll Theme
-author:
-  name: GingerAebi
+#
+# Flags below are optional
+#
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble:
   email: gingeraebi@gmail.com
-  github: gingeraebi
-  twitter: null
-  pinterest: null
-  linkedin: null
-  bio: DBYLL테마를 이용해 만든 블로그입니다.
-  email_md5: 726351295ec82e145928582f595aa3aa
+  facebook: fb.com/ljb0484
+  flickr:
+  github: gingerAebi
+  instagram:
+  linkedin: 
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  twitter:
+  stackoverflow: # your stackoverflow profile, e.g. "users/3807565/akshay"
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
 
 
-rss_path: null
-categories_path: categories.html
-tags_path: tags.html
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus:
 
-# set it as url of an image
-# sidebar_background_image: https://lh3.googleusercontent.com/GzdpEZxZ_fWmSs24Mc_t3F3kZFZCNNOVzSKfW4cZW9TDHDKv_3x_Zh-qM_wPIZSrK_tXma3c--NlZ9w-flbUGihddg=s256
-BASE_PATH:
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
 
+# Your website URL (e.g. http://akshayagarwal007.github.io)
+# Used for Sitemap.xml and your RSS feed
+url:
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: ""
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+
+permalink: /:title/
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
 gems:
-  - jekyll-paginate
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
