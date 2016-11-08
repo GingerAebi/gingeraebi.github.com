@@ -298,6 +298,14 @@ nav {
   background-color: $lightGray;
 }
 
+.mbtablestyle {
+        border-collapse: collapse;
+
+   > table, td, th {
+        border: 1px solid black;
+        }
+}
+
 footer {
   padding: 20px 0;
   text-align: center;
