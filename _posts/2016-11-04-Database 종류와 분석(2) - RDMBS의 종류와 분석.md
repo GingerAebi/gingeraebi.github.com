@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Database 종류와 분석(2) - RDBMS의 종류와 분석
+title: Database 종류와 분석(2) - MySQL
 
 ---
 
